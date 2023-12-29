@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 function Weather() {
 
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState('Chennai');
   const [data, setData] = useState({});
 
   const fetchData = async () => {
