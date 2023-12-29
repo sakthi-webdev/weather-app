@@ -33,7 +33,7 @@ function Weather() {
 
   return (
     <div className='container font-sans text-white bg-black bg-opacity-30 text-center w-full mt-12 mx-auto p-10 border border-slate-300 rounded-xl shadow-lg'>
-      <h1 className='font-bold'>Date:</h1>
+      <h1 className='font-bold m-2'>Today</h1>
       <p>{month} {day}, {year}</p>
       <h1 className='m-5 font-bold text-2xl'>Weather App</h1>
       <form>
@@ -43,6 +43,9 @@ function Weather() {
       <div className='m-5'>
         <h1 className='font-bold mb-2'>{(data.name) ? data.name + ',': ''} {data.sys && data.sys.country}</h1>
         <p>{data.weather && data.weather[0].main}</p>
+        <p className='mt-2'>Temp: {data.main && data.main.temp - 273.15}&deg; C</p>
+        <p>Humidity: {data.main && data.main.humidity}&#37;</p>
+        <p>Wind Speed: {data.wind && data.wind.speed} m/s</p>
       </div>
     </div>
 
